@@ -36,6 +36,7 @@
   "homepage": "https://github.com/leonprou/solidity-dev#readme",
   "dependencies": {
     "node-jq": "^1.11.3",
+    "openzeppelin-solidity": "2.2.0",
     "truffle": "^5.1.23",
     "truffle-flattener": "^1.5.0",
     "truffle-hdwallet-provider": "^1.0.17"
