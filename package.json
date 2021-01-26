@@ -1,14 +1,18 @@
 {
-  "name": "solidity-skeleton",
-  "version": "0.5.0",
-  "description": "Smart contracts of the Genie",
+  "name": "fuse-studio-contracts",
+  "version": "0.0.1",
+  "description": "Smart contracts of the Fuse Studio",
   "main": "index.js",
   "scripts": {
     "test": "truffle test",
     "build": "truffle compile",
     "compile": "truffle compile",
+    "ganache": "ganache-cli --accounts=15 --deterministic --defaultBalanceEther=1000000 --quiet",
     "flatten": "scripts/flatten.sh",
     "abi": "scripts/abi.sh",
+    "verify": "node scripts/verify",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
     "deploy-dev": "truffle migrate --network development",
     "deploy-kovan": "truffle migrate --network kovan",
     "deploy-ropsten": "truffle migrate --network ropsten",
@@ -36,13 +40,28 @@
   "homepage": "https://github.com/leonprou/solidity-dev#readme",
   "dependencies": {
     "node-jq": "^1.11.3",
+    "openzeppelin-solidity": "2.3.0",
     "truffle": "^5.1.23",
     "truffle-flattener": "^1.5.0",
     "truffle-hdwallet-provider": "^1.0.17"
   },
   "devDependencies": {
+    "axios": "^0.21.1",
     "bignumber.js": "^9.0.0",
+    "bn.js": "^4.11.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-bn": "^0.2.1",
+    "eslint": "^7.11.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-truffle": "^0.3.1",
+    "ethereumjs-abi": "^0.6.8",
+    "ganache-cli": "^6.12.2",
+    "promise-retry": "^2.0.1",
+    "querystring": "^0.2.0",
     "truffle-assertions": "^0.9.2"
   }
 }

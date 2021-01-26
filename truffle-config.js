@@ -53,23 +53,23 @@ module.exports = {
       network_id: '*' // Any network (default: none)
     },
     mainnet: {
-      provider: () => new HDWalletProvider(privateKey || mnemonic,  fuseRpc),
-      network_id: 1, // Ropsten's id
+      provider: () => getInfuraProvider('mainnet'),
+      network_id: 1, // Mainnet's id
       confirmations: 2, // # of confs to wait between deployments. (default: 0)
       skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
       production: true
     },
     ropsten: {
       provider: () => getInfuraProvider('ropsten'),
-      network_id: 42, // Ropsten's id
+      network_id: 3, // Ropsten's id
       gas: 5500000, // Ropsten has a lower block limit than mainnet
       confirmations: 1, // # of confs to wait between deployments. (default: 0)
       timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
       skipDryRun: true // Skip dry run before migrations? (default: false for public nets )
     },
     fuse: {
-      provider: () => new HDWalletProvider(privateKey || mnemonic,  fuseRpc),
-      network_id: 122, // Ropsten's id
+      provider: () => new HDWalletProvider(privateKey || mnemonic, fuseRpc),
+      network_id: 122, // Fuse's id
       confirmations: 1, // # of confs to wait between deployments. (default: 0)
       skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
       production: true
@@ -84,7 +84,7 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      version: '0.4.24',
+      version: '0.5.2',
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
       // settings: {          // See the solidity docs for advice about optimization and evmVersion
       optimizer: {

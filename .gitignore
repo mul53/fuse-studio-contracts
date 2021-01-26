@@ -19,3 +19,4 @@ test-results.xml
 junit
 .ganache-fork
 flats
+deployedContracts.json

@@ -5,7 +5,7 @@
     "name": "proxyOwner",
     "outputs": [
       {
-        "name": "",
+        "name": "owner",
         "type": "address"
       }
     ],
@@ -16,10 +16,6 @@
   {
     "constant": false,
     "inputs": [
-      {
-        "name": "version",
-        "type": "uint256"
-      },
       {
         "name": "implementation",
         "type": "address"
@@ -32,54 +28,8 @@
     "type": "function"
   },
   {
-    "constant": true,
-    "inputs": [],
-    "name": "version",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "implementation",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "upgradeabilityOwner",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "constant": false,
     "inputs": [
-      {
-        "name": "version",
-        "type": "uint256"
-      },
       {
         "name": "implementation",
         "type": "address"
@@ -96,17 +46,17 @@
     "type": "function"
   },
   {
-    "constant": false,
-    "inputs": [
+    "constant": true,
+    "inputs": [],
+    "name": "implementation",
+    "outputs": [
       {
-        "name": "_newImplementation",
+        "name": "impl",
         "type": "address"
       }
     ],
-    "name": "setImplementation",
-    "outputs": [],
     "payable": false,
-    "stateMutability": "nonpayable",
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -122,6 +72,12 @@
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function"
+  },
+  {
+    "inputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor"
   },
   {
     "payable": true,
@@ -148,11 +104,6 @@
   {
     "anonymous": false,
     "inputs": [
-      {
-        "indexed": false,
-        "name": "version",
-        "type": "uint256"
-      },
       {
         "indexed": true,
         "name": "implementation",
